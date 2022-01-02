@@ -16,12 +16,12 @@
   <meta name="description" content="童同学的博客">
   <meta name="author" content="wellCome">
   <meta name="keywords" content="">
-  <meta name="description" content="webpack：静态模块打包器 ​ npm init -y （初始化项目，记录依赖） npm i webpack webpack-cli -D ​ 静态资源（js&#x2F;json&#x2F;css&#x2F;img&#x2F;less&#x2F;…）→chunk（块：各种相互依赖的文件）→ 打包（less→css,js→js…）→ bundle（输出） webpack 五个核心概念    打包样式文件：loader，下载 → 使用 打包 cs">
+  <meta name="description" content="webpack：静态模块打包器​ npm init -y （初始化项目，记录依赖） npm i webpack webpack-cli -D ​ 静态资源（js&#x2F;json&#x2F;css&#x2F;img&#x2F;less&#x2F;…）→chunk（块：各种相互依赖的文件）→ 打包（less→css,js→js……）→ bundle（输出） webpack 五个核心概念   打包样式文件：loader，下载 → 使用打包 css">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Webpack学习笔记">
 <meta property="og:url" content="http://example.com/2020/11/24/webpack/index.html">
 <meta property="og:site_name" content="童同学">
-<meta property="og:description" content="webpack：静态模块打包器 ​ npm init -y （初始化项目，记录依赖） npm i webpack webpack-cli -D ​ 静态资源（js&#x2F;json&#x2F;css&#x2F;img&#x2F;less&#x2F;…）→chunk（块：各种相互依赖的文件）→ 打包（less→css,js→js…）→ bundle（输出） webpack 五个核心概念    打包样式文件：loader，下载 → 使用 打包 cs">
+<meta property="og:description" content="webpack：静态模块打包器​ npm init -y （初始化项目，记录依赖） npm i webpack webpack-cli -D ​ 静态资源（js&#x2F;json&#x2F;css&#x2F;img&#x2F;less&#x2F;…）→chunk（块：各种相互依赖的文件）→ 打包（less→css,js→js……）→ bundle（输出） webpack 五个核心概念   打包样式文件：loader，下载 → 使用打包 css">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/img/image-20210305150256460.png">
 <meta property="og:image" content="http://example.com/img/image-20210305150706854.png">
@@ -216,7 +216,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      964 字
+      965 字
     </span>
   
 
@@ -257,66 +257,48 @@
             <h1 style="display: none">Webpack学习笔记</h1>
             
             <div class="markdown-body">
-              <h1>webpack：静态模块打包器</h1>
-<p>​ npm init -y （初始化项目，记录依赖） npm i webpack webpack-cli -D</p>
-<p>​ 静态资源（js/json/css/img/less/…）→chunk（块：各种相互依赖的文件）→ 打包（less→css,js→js…）→ bundle（输出）</p>
-<h2 id="webpack-五个核心概念">webpack 五个核心概念</h2>
-<p><img src="/img/image-20210305150256460.png" srcset="/img/loading.gif" lazyload alt="image-20210305150256460"></p>
+              <h1 id="webpack：静态模块打包器"><a href="#webpack：静态模块打包器" class="headerlink" title="webpack：静态模块打包器"></a>webpack：静态模块打包器</h1><p>​ npm init -y （初始化项目，记录依赖） npm i webpack webpack-cli -D</p>
+<p>​ 静态资源（js/json/css/img/less/…）→chunk（块：各种相互依赖的文件）→ 打包（less→css,js→js……）→ bundle（输出）</p>
+<h2 id="webpack-五个核心概念"><a href="#webpack-五个核心概念" class="headerlink" title="webpack 五个核心概念"></a>webpack 五个核心概念</h2><p><img src="/img/image-20210305150256460.png" srcset="/img/loading.gif" lazyload alt="image-20210305150256460"></p>
 <p><img src="/img/image-20210305150706854.png" srcset="/img/loading.gif" lazyload alt="image-20210305150706854"></p>
 <p><img src="/img/image-20210305162439514.png" srcset="/img/loading.gif" lazyload alt="image-20210305162439514"></p>
-<h2 id="打包样式文件：loader，下载-→-使用">打包样式文件：loader，下载 → 使用</h2>
-<h3 id="打包-css">打包 css</h3>
-<p><img src="/img/image-20210307111030416.png" srcset="/img/loading.gif" lazyload alt="image-20210307111030416"></p>
-<h3 id="打包-less">打包 less</h3>
-<p><img src="/img/image-20210307151303263.png" srcset="/img/loading.gif" lazyload alt="image-20210307151303263"></p>
-<h2 id="打包-html：通过-html-webpack-plugin">打包 html：通过 html-webpack-plugin</h2>
-<p>​ 与 loader 不同，需要下载 → 引入 → 使用</p>
+<h2 id="打包样式文件：loader，下载-→-使用"><a href="#打包样式文件：loader，下载-→-使用" class="headerlink" title="打包样式文件：loader，下载 → 使用"></a>打包样式文件：loader，下载 → 使用</h2><h3 id="打包-css"><a href="#打包-css" class="headerlink" title="打包 css"></a>打包 css</h3><p><img src="/img/image-20210307111030416.png" srcset="/img/loading.gif" lazyload alt="image-20210307111030416"></p>
+<h3 id="打包-less"><a href="#打包-less" class="headerlink" title="打包 less"></a>打包 less</h3><p><img src="/img/image-20210307151303263.png" srcset="/img/loading.gif" lazyload alt="image-20210307151303263"></p>
+<h2 id="打包-html：通过-html-webpack-plugin"><a href="#打包-html：通过-html-webpack-plugin" class="headerlink" title="打包 html：通过 html-webpack-plugin"></a>打包 html：通过 html-webpack-plugin</h2><p>​ 与 loader 不同，需要下载 → 引入 → 使用</p>
 <p><img src="/img/image-20210307152626686.png" srcset="/img/loading.gif" lazyload alt="image-20210307152626686"></p>
-<h2 id="打包图片资源">打包图片资源</h2>
-<p>​ 使用多个 loader 用 use，一个用 loader</p>
+<h2 id="打包图片资源"><a href="#打包图片资源" class="headerlink" title="打包图片资源"></a>打包图片资源</h2><p>​ 使用多个 loader 用 use，一个用 loader</p>
 <p>​ url-loader 依赖 file-loader</p>
 <p>​ 处理 url 里的图片：</p>
 <p>​ 图片重命名：options: {name: ‘[hash:10].[ext]’} 取哈希值的前 10 位，取文件原来的扩展名</p>
 <p><img src="/img/image-20210308091903479.png" srcset="/img/loading.gif" lazyload alt="image-20210308091903479"></p>
 <p>处理 html 里的 img 图片：html-withimg-loader,并且设置 esModule: false</p>
 <p><img src="/img/image-20210308103752111.png" srcset="/img/loading.gif" lazyload alt="image-20210308103752111"></p>
-<h2 id="打包其它资源">打包其它资源</h2>
-<p><img src="/img/image-20210308111551096.png" srcset="/img/loading.gif" lazyload alt="image-20210308111551096"></p>
-<h2 id="devServer：开发服务器">devServer：开发服务器</h2>
-<p>​ 安装包：webpack-dev-server 启动指令：npx webpack serve 访问：localhost:3000</p>
+<h2 id="打包其它资源"><a href="#打包其它资源" class="headerlink" title="打包其它资源"></a>打包其它资源</h2><p><img src="/img/image-20210308111551096.png" srcset="/img/loading.gif" lazyload alt="image-20210308111551096"></p>
+<h2 id="devServer：开发服务器"><a href="#devServer：开发服务器" class="headerlink" title="devServer：开发服务器"></a>devServer：开发服务器</h2><p>​ 安装包：webpack-dev-server 启动指令：npx webpack serve 访问：localhost:3000</p>
 <p><img src="/img/image-20210308112428077.png" srcset="/img/loading.gif" lazyload alt="image-20210308112428077"></p>
-<h2 id="开发环境配置">开发环境配置</h2>
-<p>​ 见 08 开发环境配置</p>
-<h1>生产环境</h1>
-<h2 id="单独提取-css">单独提取 css</h2>
-<p>​ 安装 mini-css-extract-plugin 插件</p>
+<h2 id="开发环境配置"><a href="#开发环境配置" class="headerlink" title="开发环境配置"></a>开发环境配置</h2><p>​ 见 08 开发环境配置</p>
+<h1 id="生产环境"><a href="#生产环境" class="headerlink" title="生产环境"></a>生产环境</h1><h2 id="单独提取-css"><a href="#单独提取-css" class="headerlink" title="单独提取 css"></a>单独提取 css</h2><p>​ 安装 mini-css-extract-plugin 插件</p>
 <p>​ <img src="/img/image-20210309110946971.png" srcset="/img/loading.gif" lazyload alt="image-20210309110946971"></p>
 <p>​ 用该插件替代 style-loader</p>
 <p><img src="/img/image-20210309111018113.png" srcset="/img/loading.gif" lazyload alt="image-20210309111018113"></p>
-<h2 id="css-兼容性处理">css 兼容性处理</h2>
-<p>​ postcss-loader 和 postcss-preset-env</p>
+<h2 id="css-兼容性处理"><a href="#css-兼容性处理" class="headerlink" title="css 兼容性处理"></a>css 兼容性处理</h2><p>​ postcss-loader 和 postcss-preset-env</p>
 <p>​ 在 package.json 中配置 browserslist</p>
 <p>​ process.env.NODE_ENV 配置 node 环境变量，从而加载 development 的兼容性样式</p>
 <p><img src="/img/image-20210309115146427.png" srcset="/img/loading.gif" lazyload alt="image-20210309115146427"></p>
 <p><img src="/img/image-20210309114335361.png" srcset="/img/loading.gif" lazyload alt="image-20210309114335361"></p>
 <p><img src="/img/image-20210309131637564.png" srcset="/img/loading.gif" lazyload alt="image-20210309131637564"></p>
-<h2 id="压缩-css">压缩 css</h2>
-<p>插件：optimize-css-assets-webpack-plugin 引入，使用即可</p>
+<h2 id="压缩-css"><a href="#压缩-css" class="headerlink" title="压缩 css"></a>压缩 css</h2><p>插件：optimize-css-assets-webpack-plugin 引入，使用即可</p>
 <p><img src="/img/image-20210309133153937.png" srcset="/img/loading.gif" lazyload alt="image-20210309133153937"></p>
-<h2 id="js-语法检查-eslint">js 语法检查 eslint</h2>
-<p>​ 图中 eslint-loader 弃用 改为 eslint-webpack-plugin</p>
+<h2 id="js-语法检查-eslint"><a href="#js-语法检查-eslint" class="headerlink" title="js 语法检查 eslint"></a>js 语法检查 eslint</h2><p>​ 图中 eslint-loader 弃用 改为 eslint-webpack-plugin</p>
 <p><img src="/img/image-20210309140846885.png" srcset="/img/loading.gif" lazyload alt="image-20210309140846885"></p>
-<h2 id="js-兼容性处理-babel">js 兼容性处理 babel</h2>
-<p>​ 注：@babel/polyfill 替换成 babel-polyfil 无需配置，直接在 index.js 引入即可</p>
+<h2 id="js-兼容性处理-babel"><a href="#js-兼容性处理-babel" class="headerlink" title="js 兼容性处理 babel"></a>js 兼容性处理 babel</h2><p>​ 注：@babel/polyfill 替换成 babel-polyfil 无需配置，直接在 index.js 引入即可</p>
 <p>​ core-js 和 babel-polyfill 只能选一个</p>
 <p><img src="/img/image-20210312155645903.png" srcset="/img/loading.gif" lazyload alt="image-20210312155645903"></p>
 <p>​ 推荐：按需加载</p>
 <p><img src="/img/image-20210312131249166.png" srcset="/img/loading.gif" lazyload alt="image-20210312131249166"></p>
-<h2 id="压缩-js-和-html">压缩 js 和 html</h2>
-<p>​ mode: production HTML 和 js 都会去除空格和注释，js 还会运行函数，直接将结果进行打包</p>
+<h2 id="压缩-js-和-html"><a href="#压缩-js-和-html" class="headerlink" title="压缩 js 和 html"></a>压缩 js 和 html</h2><p>​ mode: production HTML 和 js 都会去除空格和注释，js 还会运行函数，直接将结果进行打包</p>
 <p><img src="/img/image-20210315142733466.png" srcset="/img/loading.gif" lazyload alt="image-20210315142733466"></p>
-<h2 id="生产环境基本配置">生产环境基本配置</h2>
-<p>​ 见代码</p>
+<h2 id="生产环境基本配置"><a href="#生产环境基本配置" class="headerlink" title="生产环境基本配置"></a>生产环境基本配置</h2><p>​ 见代码</p>
 
             </div>
             <hr>

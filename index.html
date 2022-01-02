@@ -192,6 +192,56 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
+        <a href="/2021/06/09/webpack%20-%20%E5%89%AF%E6%9C%AC/" target="_self">
+          vue路由跳转四种方式（带参数）
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/06/09/webpack%20-%20%E5%89%AF%E6%9C%AC/" target="_self">
+          
+          
+            
+          
+          1.router-link123456789101112131415161718192021222324252627281. 不带参数 &lt;router-link :to=&quot;&#123;name:&#x27;home&#x27;&#125;&quot;&gt; &lt;router-link :to=&quot;&#123;path:&#x27;/home&#x27;&#125;&q
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-06-09 00:00" pubdate>
+              2021-06-09
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/vue/">vue</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
         <a href="/2021/05/12/justify-content/" target="_self">
           space-between与space-aroud的区别
         </a>
@@ -203,10 +253,8 @@
           
             
           
-          space-between 与 space-around 的区别
-flex 布局 justify-content 属性值区别
-space-between 最左、最右 item 贴合左侧或右侧边框，item 与 item 之间间距相等。
-space-around 每个 item 左右方向的 margin 相等。两个 item 中间的间距会比较大
+          space-between 与 space-around 的区别flex 布局 justify-content 属性值区别
+space-between 最左、最右 item 贴合左侧或右侧边框，item 与 item 之间间距相等。space-around 每个 item 左右方向的 margin 相等。两个 item 中间的间距会比较大
 
 align-items:center; 垂直居中~
 
@@ -245,9 +293,8 @@ align-items:center; 垂直居中~
           
             
           
-          Vuex报错 unknown mutation type
-默认情况下，模块内部的 action、mutation 和 getter 是注册在全局命名空间的，这样使得多个模块能够对同一 mutation 或 action 作出响应，使用this.$store.commit(‘mutation’)触发mutation
-如果要使用this.$store.commit(‘模块名称/mutation’)的方
+          Vuex报错 unknown mutation type默认情况下，模块内部的 action、mutation 和 getter 是注册在全局命名空间的，这样使得多个模块能够对同一 mutation 或 action 作出响应，使用this.$store.commit(‘mutation’)触发mutation
+如果要使用this.$store.commit(‘模块名称/mutation’)的方式
         </a>
       </p>
 
@@ -291,19 +338,13 @@ align-items:center; 垂直居中~
             
           
           Less
-
 变量
-
 嵌套
 
 
-
 less 运算： 运算符左右两侧必须空格隔开
-
 单位
-
 less 编译
-
 
         </a>
       </p>
@@ -349,23 +390,18 @@ less 编译
           
           MVVM
 
-
-模板语法
-常用指令
-
+模板语法常用指令
 v-text 和 v-html
 
-
 v-cloak 防止闪现：利用模板指令解析后不存在的特性
-
-自定义指令
-​ el：指令属性所在的标签对象
+自定义指令​ el：指令属性所在的标签对象
 ​ binding：包含指令相关信息数据的对象
 ​ 局部指令只在定义的 vm 中有效
 
-计算属性
-总结：computed 适合一个数据被多个数据影响，watch 适合一个数据影响多个数据
-​ 计算属性（computed）：
+计算属性总结：computed 适合一个数据被多个数据影响，watch 适合一个数据影响多个数据​ 计算属性（computed）：
+
+
+​ 侦听器
         </a>
       </p>
 
@@ -415,15 +451,13 @@ v-cloak 防止闪现：利用模板指令解析后不存在的特性
           
             
           
-          webpack：静态模块打包器
-​ npm init -y （初始化项目，记录依赖） npm i webpack webpack-cli -D
-​ 静态资源（js/json/css/img/less/…）→chunk（块：各种相互依赖的文件）→ 打包（less→css,js→js…）→ bundle（输出）
+          webpack：静态模块打包器​ npm init -y （初始化项目，记录依赖） npm i webpack webpack-cli -D
+​ 静态资源（js/json/css/img/less/…）→chunk（块：各种相互依赖的文件）→ 打包（less→css,js→js……）→ bundle（输出）
 webpack 五个核心概念
 
 
+打包样式文件：loader，下载 → 使用打包 css
 
-打包样式文件：loader，下载 → 使用
-打包 cs
         </a>
       </p>
 
@@ -469,32 +503,20 @@ webpack 五个核心概念
           node 基本原理
 
 
-
 nodejs 特点
-
 事件驱动：
 
-
 nodejs 全局变量（可以直接使用，不需要 require）
-
 buffer
-
 stream 流
-
 fs.createReadStream 可写流
-
 fs.createWriteStream 可读流
 
-
-.pipe 管道流
-​ 将可读流的数据传输到可写流
+.pipe 管道流​ 将可读流的数据传输到可写流
 
 
-链式流 用来操作管道流
-压缩和解压缩
-zlib.createGzip
-
-z
+链式流 用来操作管道流压缩和解压缩zlib.createGzip
+zlib.createGu
         </a>
       </p>
 

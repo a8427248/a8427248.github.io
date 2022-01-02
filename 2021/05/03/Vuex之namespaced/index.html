@@ -16,12 +16,12 @@
   <meta name="description" content="童同学的博客">
   <meta name="author" content="wellCome">
   <meta name="keywords" content="">
-  <meta name="description" content="Vuex报错 unknown mutation type 默认情况下，模块内部的 action、mutation 和 getter 是注册在全局命名空间的，这样使得多个模块能够对同一 mutation 或 action 作出响应，使用this.$store.commit(‘mutation’)触发mutation 如果要使用this.$store.commit(‘模块名称&#x2F;mutation’)的方">
+  <meta name="description" content="Vuex报错 unknown mutation type默认情况下，模块内部的 action、mutation 和 getter 是注册在全局命名空间的，这样使得多个模块能够对同一 mutation 或 action 作出响应，使用this.$store.commit(‘mutation’)触发mutation 如果要使用this.$store.commit(‘模块名称&#x2F;mutation’)的方式">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Vuex之namespaced的使用">
 <meta property="og:url" content="http://example.com/2021/05/03/Vuex%E4%B9%8Bnamespaced/index.html">
 <meta property="og:site_name" content="童同学">
-<meta property="og:description" content="Vuex报错 unknown mutation type 默认情况下，模块内部的 action、mutation 和 getter 是注册在全局命名空间的，这样使得多个模块能够对同一 mutation 或 action 作出响应，使用this.$store.commit(‘mutation’)触发mutation 如果要使用this.$store.commit(‘模块名称&#x2F;mutation’)的方">
+<meta property="og:description" content="Vuex报错 unknown mutation type默认情况下，模块内部的 action、mutation 和 getter 是注册在全局命名空间的，这样使得多个模块能够对同一 mutation 或 action 作出响应，使用this.$store.commit(‘mutation’)触发mutation 如果要使用this.$store.commit(‘模块名称&#x2F;mutation’)的方式">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-05-02T16:00:00.000Z">
 <meta property="article:modified_time" content="2021-12-16T09:18:41.250Z">
@@ -236,8 +236,7 @@
             <h1 style="display: none">Vuex之namespaced的使用</h1>
             
             <div class="markdown-body">
-              <h1>Vuex报错 unknown mutation type</h1>
-<p>默认情况下，模块内部的 action、mutation 和 getter 是注册在全局命名空间的，这样使得多个模块能够对同一 mutation 或 action 作出响应，使用this.$store.commit(‘mutation’)触发mutation</p>
+              <h1 id="Vuex报错-unknown-mutation-type"><a href="#Vuex报错-unknown-mutation-type" class="headerlink" title="Vuex报错 unknown mutation type"></a>Vuex报错 unknown mutation type</h1><p>默认情况下，模块内部的 action、mutation 和 getter 是注册在全局命名空间的，这样使得多个模块能够对同一 mutation 或 action 作出响应，使用this.$store.commit(‘mutation’)触发mutation</p>
 <p>如果要使用this.$store.commit(‘模块名称/mutation’)的方式触发mutation，可以通过添加 namespaced: true到export default 的方式使其成为带命名空间的模块。</p>
 
             </div>
