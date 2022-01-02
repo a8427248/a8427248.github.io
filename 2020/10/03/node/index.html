@@ -16,12 +16,12 @@
   <meta name="description" content="童同学的博客">
   <meta name="author" content="wellCome">
   <meta name="keywords" content="">
-  <meta name="description" content="node 基本原理   nodejs 特点 事件驱动：  nodejs 全局变量（可以直接使用，不需要 require） buffer stream 流 fs.createReadStream 可写流 fs.createWriteStream 可读流  .pipe 管道流​ 将可读流的数据传输到可写流   链式流 用来操作管道流压缩和解压缩zlib.createGzip zlib.createGu">
+  <meta name="description" content="node 基本原理    nodejs 特点  事件驱动：   nodejs 全局变量（可以直接使用，不需要 require）  buffer  stream 流  fs.createReadStream 可写流  fs.createWriteStream 可读流   .pipe 管道流 ​ 将可读流的数据传输到可写流   链式流 用来操作管道流 压缩和解压缩 zlib.createGzip  z">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Node学习笔记">
 <meta property="og:url" content="http://example.com/2020/10/03/node/index.html">
 <meta property="og:site_name" content="童同学">
-<meta property="og:description" content="node 基本原理   nodejs 特点 事件驱动：  nodejs 全局变量（可以直接使用，不需要 require） buffer stream 流 fs.createReadStream 可写流 fs.createWriteStream 可读流  .pipe 管道流​ 将可读流的数据传输到可写流   链式流 用来操作管道流压缩和解压缩zlib.createGzip zlib.createGu">
+<meta property="og:description" content="node 基本原理    nodejs 特点  事件驱动：   nodejs 全局变量（可以直接使用，不需要 require）  buffer  stream 流  fs.createReadStream 可写流  fs.createWriteStream 可读流   .pipe 管道流 ​ 将可读流的数据传输到可写流   链式流 用来操作管道流 压缩和解压缩 zlib.createGzip  z">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/img/image-20201202163918589.png">
 <meta property="og:image" content="http://example.com/img/image-20201202165741414.png">
@@ -282,56 +282,94 @@
             <h1 style="display: none">Node学习笔记</h1>
             
             <div class="markdown-body">
-              <h1 id="node-基本原理"><a href="#node-基本原理" class="headerlink" title="node 基本原理"></a>node 基本原理</h1><p><img src="/img/image-20201202163918589.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="/img/image-20201202165741414.png" srcset="/img/loading.gif" lazyload></p>
+              <h1>node 基本原理</h1>
+<p><img src="/img/image-20201202163918589.png" srcset="/img/loading.gif" lazyload alt=""></p>
+<p><img src="/img/image-20201202165741414.png" srcset="/img/loading.gif" lazyload alt=""></p>
 <p><img src="/img/image-20201203111323129.png" srcset="/img/loading.gif" lazyload alt="image-20201203111323129"></p>
-<h2 id="nodejs-特点"><a href="#nodejs-特点" class="headerlink" title="nodejs 特点"></a>nodejs 特点</h2><p><img src="/img/image-20201203094207673.png" srcset="/img/loading.gif" lazyload alt="image-20201203094207673"></p>
-<h2 id="事件驱动："><a href="#事件驱动：" class="headerlink" title="事件驱动："></a>事件驱动：</h2><p><img src="/img/image-20210222093816560.png" srcset="/img/loading.gif" lazyload alt="image-20210222093816560"></p>
-<p><img src="/img/image-20201203100413186.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="nodejs-全局变量（可以直接使用，不需要-require）"><a href="#nodejs-全局变量（可以直接使用，不需要-require）" class="headerlink" title="nodejs 全局变量（可以直接使用，不需要 require）"></a>nodejs 全局变量（可以直接使用，不需要 require）</h1><p><img src="/img/image-20201203110848705.png" srcset="/img/loading.gif" lazyload alt="image-20201203110848705"></p>
-<h1 id="buffer"><a href="#buffer" class="headerlink" title="buffer"></a>buffer</h1><p><img src="/img/image-20210907095757920.png" srcset="/img/loading.gif" lazyload alt="image-20210907095757920"></p>
-<h1 id="stream-流"><a href="#stream-流" class="headerlink" title="stream 流"></a>stream 流</h1><p><img src="/img/image-20210903162426015.png" srcset="/img/loading.gif" lazyload alt="image-20210903162426015"></p>
-<h2 id="fs-createReadStream-可写流"><a href="#fs-createReadStream-可写流" class="headerlink" title="fs.createReadStream 可写流"></a>fs.createReadStream 可写流</h2><p><img src="/img/image-20210904081035773.png" srcset="/img/loading.gif" lazyload alt="image-20210904081035773"></p>
-<h2 id="fs-createWriteStream-可读流"><a href="#fs-createWriteStream-可读流" class="headerlink" title="fs.createWriteStream 可读流"></a>fs.createWriteStream 可读流</h2><p><img src="/img/image-20210904081126794.png" srcset="/img/loading.gif" lazyload alt="image-20210904081126794"></p>
+<h2 id="nodejs-特点">nodejs 特点</h2>
+<p><img src="/img/image-20201203094207673.png" srcset="/img/loading.gif" lazyload alt="image-20201203094207673"></p>
+<h2 id="事件驱动：">事件驱动：</h2>
+<p><img src="/img/image-20210222093816560.png" srcset="/img/loading.gif" lazyload alt="image-20210222093816560"></p>
+<p><img src="/img/image-20201203100413186.png" srcset="/img/loading.gif" lazyload alt=""></p>
+<h1>nodejs 全局变量（可以直接使用，不需要 require）</h1>
+<p><img src="/img/image-20201203110848705.png" srcset="/img/loading.gif" lazyload alt="image-20201203110848705"></p>
+<h1>buffer</h1>
+<p><img src="/img/image-20210907095757920.png" srcset="/img/loading.gif" lazyload alt="image-20210907095757920"></p>
+<h1>stream 流</h1>
+<p><img src="/img/image-20210903162426015.png" srcset="/img/loading.gif" lazyload alt="image-20210903162426015"></p>
+<h2 id="fs-createReadStream-可写流">fs.createReadStream 可写流</h2>
+<p><img src="/img/image-20210904081035773.png" srcset="/img/loading.gif" lazyload alt="image-20210904081035773"></p>
+<h2 id="fs-createWriteStream-可读流">fs.createWriteStream 可读流</h2>
+<p><img src="/img/image-20210904081126794.png" srcset="/img/loading.gif" lazyload alt="image-20210904081126794"></p>
 <p><img src="/img/image-20210904081151997.png" srcset="/img/loading.gif" lazyload alt="image-20210904081151997"></p>
-<h2 id="pipe-管道流"><a href="#pipe-管道流" class="headerlink" title=".pipe 管道流"></a>.pipe 管道流</h2><p>​ 将可读流的数据传输到可写流</p>
+<h2 id="pipe-管道流">.pipe 管道流</h2>
+<p>​ 将可读流的数据传输到可写流</p>
 <p><img src="/img/image-20210904083849970.png" srcset="/img/loading.gif" lazyload alt="image-20210904083849970"></p>
 <p><img src="/img/image-20210904083910909.png" srcset="/img/loading.gif" lazyload alt="image-20210904083910909"></p>
-<h1 id="链式流-用来操作管道流"><a href="#链式流-用来操作管道流" class="headerlink" title="链式流 用来操作管道流"></a>链式流 用来操作管道流</h1><h2 id="压缩和解压缩"><a href="#压缩和解压缩" class="headerlink" title="压缩和解压缩"></a>压缩和解压缩</h2><h2 id="zlib-createGzip"><a href="#zlib-createGzip" class="headerlink" title="zlib.createGzip"></a>zlib.createGzip</h2><p><img src="/img/image-20210904090828392.png" srcset="/img/loading.gif" lazyload alt="image-20210904090828392"></p>
-<h2 id="zlib-createGunzip"><a href="#zlib-createGunzip" class="headerlink" title="zlib.createGunzip"></a>zlib.createGunzip</h2><p><img src="/img/image-20210904090901515.png" srcset="/img/loading.gif" lazyload alt="image-20210904090901515"></p>
-<h1 id="文件写入操作-fs-writeFile"><a href="#文件写入操作-fs-writeFile" class="headerlink" title="文件写入操作 fs.writeFile()"></a>文件写入操作 fs.writeFile()</h1><p><img src="/img/image-20201203110531468.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="文件读取：fs-readFile-不传编码默认读取为-buffer"><a href="#文件读取：fs-readFile-不传编码默认读取为-buffer" class="headerlink" title="文件读取：fs.readFile() 不传编码默认读取为 buffer"></a>文件读取：fs.readFile() 不传编码默认读取为 buffer</h1><p><img src="/img/image-20201203113717472.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="绝对路径"><a href="#绝对路径" class="headerlink" title="绝对路径"></a>绝对路径</h1><p><img src="/img/image-20201203120045386.png" srcset="/img/loading.gif" lazyload alt="image-20201203120045386"></p>
-<h1 id="path-路径拼接"><a href="#path-路径拼接" class="headerlink" title="path 路径拼接"></a>path 路径拼接</h1><p><img src="/img/image-20201203130658873.png" srcset="/img/loading.gif" lazyload alt="image-20201203130658873"></p>
-<h1 id="创建文件夹"><a href="#创建文件夹" class="headerlink" title="创建文件夹"></a>创建文件夹</h1><p><img src="/img/image-20201203160040885.png" srcset="/img/loading.gif" lazyload alt="image-20201203160040885"></p>
-<h1 id="http-模块创建最简单的-http-服务"><a href="#http-模块创建最简单的-http-服务" class="headerlink" title="http 模块创建最简单的 http 服务"></a>http 模块创建最简单的 http 服务</h1><p><img src="/img/image-20201203220844331.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="根据用户请求路径返回结果：res-url"><a href="#根据用户请求路径返回结果：res-url" class="headerlink" title="根据用户请求路径返回结果：res.url"></a>根据用户请求路径返回结果：res.url</h1><p><img src="/img/image-20201204143305781.png" srcset="/img/loading.gif" lazyload alt="image-20201204143305781"></p>
-<h1 id="根据用户请求路径返回现有的-HTML-文件"><a href="#根据用户请求路径返回现有的-HTML-文件" class="headerlink" title="根据用户请求路径返回现有的 HTML 文件"></a>根据用户请求路径返回现有的 HTML 文件</h1><p><img src="/img/image-20201204154544423.png" srcset="/img/loading.gif" lazyload alt="image-20201204154544423"></p>
-<h1 id="try-catch"><a href="#try-catch" class="headerlink" title="try -catch"></a>try -catch</h1><p><img src="/img/image-20201208160450594.png" srcset="/img/loading.gif" lazyload alt="image-20201208160450594"></p>
-<h1 id="模仿-Apache-服务器"><a href="#模仿-Apache-服务器" class="headerlink" title="模仿 Apache 服务器"></a>模仿 Apache 服务器</h1><p><img src="/img/image-20201221105744537.png" srcset="/img/loading.gif" lazyload></p>
+<h1>链式流 用来操作管道流</h1>
+<h2 id="压缩和解压缩">压缩和解压缩</h2>
+<h2 id="zlib-createGzip">zlib.createGzip</h2>
+<p><img src="/img/image-20210904090828392.png" srcset="/img/loading.gif" lazyload alt="image-20210904090828392"></p>
+<h2 id="zlib-createGunzip">zlib.createGunzip</h2>
+<p><img src="/img/image-20210904090901515.png" srcset="/img/loading.gif" lazyload alt="image-20210904090901515"></p>
+<h1>文件写入操作 fs.writeFile()</h1>
+<p><img src="/img/image-20201203110531468.png" srcset="/img/loading.gif" lazyload alt=""></p>
+<h1>文件读取：fs.readFile() 不传编码默认读取为 buffer</h1>
+<p><img src="/img/image-20201203113717472.png" srcset="/img/loading.gif" lazyload alt=""></p>
+<h1>绝对路径</h1>
+<p><img src="/img/image-20201203120045386.png" srcset="/img/loading.gif" lazyload alt="image-20201203120045386"></p>
+<h1>path 路径拼接</h1>
+<p><img src="/img/image-20201203130658873.png" srcset="/img/loading.gif" lazyload alt="image-20201203130658873"></p>
+<h1>创建文件夹</h1>
+<p><img src="/img/image-20201203160040885.png" srcset="/img/loading.gif" lazyload alt="image-20201203160040885"></p>
+<h1>http 模块创建最简单的 http 服务</h1>
+<p><img src="/img/image-20201203220844331.png" srcset="/img/loading.gif" lazyload alt=""></p>
+<h1>根据用户请求路径返回结果：res.url</h1>
+<p><img src="/img/image-20201204143305781.png" srcset="/img/loading.gif" lazyload alt="image-20201204143305781"></p>
+<h1>根据用户请求路径返回现有的 HTML 文件</h1>
+<p><img src="/img/image-20201204154544423.png" srcset="/img/loading.gif" lazyload alt="image-20201204154544423"></p>
+<h1>try -catch</h1>
+<p><img src="/img/image-20201208160450594.png" srcset="/img/loading.gif" lazyload alt="image-20201208160450594"></p>
+<h1>模仿 Apache 服务器</h1>
+<p><img src="/img/image-20201221105744537.png" srcset="/img/loading.gif" lazyload alt=""></p>
 <p>对于服务器而言，请求的 url 就是一个标识符</p>
-<h1 id="request（http-IncomingMessage）对象常用-API"><a href="#request（http-IncomingMessage）对象常用-API" class="headerlink" title="request（http.IncomingMessage）对象常用 API"></a>request（http.IncomingMessage）对象常用 API</h1><p><img src="/img/image-20201210104036265.png" srcset="/img/loading.gif" lazyload alt="image-20201210104036265"></p>
-<h1 id="response（http-ServerResponse）常用-API"><a href="#response（http-ServerResponse）常用-API" class="headerlink" title="response（http.ServerResponse）常用 API"></a>response（http.ServerResponse）常用 API</h1><p>​ ps:如果没有手动调用 res.writeHead（）则系统会隐式的调用（如果有调用 4、5 方法此时相应的设置会被引用，没有则设置默认值）</p>
+<h1>request（http.IncomingMessage）对象常用 API</h1>
+<p><img src="/img/image-20201210104036265.png" srcset="/img/loading.gif" lazyload alt="image-20201210104036265"></p>
+<h1>response（http.ServerResponse）常用 API</h1>
+<p>​ ps:如果没有手动调用 res.writeHead（）则系统会隐式的调用（如果有调用 4、5 方法此时相应的设置会被引用，没有则设置默认值）</p>
 <p><img src="/img/image-20201210111116298.png" srcset="/img/loading.gif" lazyload alt="image-20201210111116298"></p>
-<h1 id="NPM（node-package-manager）"><a href="#NPM（node-package-manager）" class="headerlink" title="NPM（node package manager）"></a>NPM（node package manager）</h1><p>​ 客户端、代码仓库、网站</p>
+<h1>NPM（node package manager）</h1>
+<p>​ 客户端、代码仓库、网站</p>
 <p><img src="/img/image-20201210114924214.png" srcset="/img/loading.gif" lazyload alt="image-20201210114924214"></p>
-<h1 id="模块和包的区别"><a href="#模块和包的区别" class="headerlink" title="模块和包的区别"></a>模块和包的区别</h1><p><img src="/img/image-20201211141745393.png" srcset="/img/loading.gif" lazyload alt="image-20201211141745393"></p>
-<h2 id="模块的导入导出"><a href="#模块的导入导出" class="headerlink" title="模块的导入导出"></a>模块的导入导出</h2><p><img src="/img/image-20210222210415889.png" srcset="/img/loading.gif" lazyload alt="image-20210222210415889"></p>
-<h2 id="package-json-元文件：描述项目自身的文件"><a href="#package-json-元文件：描述项目自身的文件" class="headerlink" title="package.json(元文件：描述项目自身的文件)"></a>package.json(元文件：描述项目自身的文件)</h2><p><img src="/img/image-20201211153437476.png" srcset="/img/loading.gif" lazyload alt="image-20201211153437476"></p>
+<h1>模块和包的区别</h1>
+<p><img src="/img/image-20201211141745393.png" srcset="/img/loading.gif" lazyload alt="image-20201211141745393"></p>
+<h2 id="模块的导入导出">模块的导入导出</h2>
+<p><img src="/img/image-20210222210415889.png" srcset="/img/loading.gif" lazyload alt="image-20210222210415889"></p>
+<h2 id="package-json-元文件：描述项目自身的文件">package.json(元文件：描述项目自身的文件)</h2>
+<p><img src="/img/image-20201211153437476.png" srcset="/img/loading.gif" lazyload alt="image-20201211153437476"></p>
 <p><img src="/img/image-20201211154156226.png" srcset="/img/loading.gif" lazyload alt="image-20201211154156226"></p>
-<h1 id="url-模块，url-parse"><a href="#url-模块，url-parse" class="headerlink" title="url 模块，url.parse()"></a>url 模块，url.parse()</h1><p><img src="/img/image-20201221100259760.png" srcset="/img/loading.gif" lazyload alt="image-20201221100259760"></p>
+<h1>url 模块，url.parse()</h1>
+<p><img src="/img/image-20201221100259760.png" srcset="/img/loading.gif" lazyload alt="image-20201221100259760"></p>
 <p><img src="/img/image-20201221100315632.png" srcset="/img/loading.gif" lazyload alt="image-20201221100315632"></p>
 <p><img src="/img/image-20201221100223791.png" srcset="/img/loading.gif" lazyload alt="image-20201221100223791"></p>
-<h2 id="重定向"><a href="#重定向" class="headerlink" title="重定向"></a>重定向</h2><p><img src="/img/image-20201221114532427.png" srcset="/img/loading.gif" lazyload alt="image-20201221114532427"></p>
-<h1 id="require-加载模块时-同步加载"><a href="#require-加载模块时-同步加载" class="headerlink" title="require 加载模块时 同步加载"></a>require 加载模块时 同步加载</h1><p><img src="/img/image-20201222140705533.png" srcset="/img/loading.gif" lazyload alt="image-20201222140705533"></p>
-<h4 id=""><a href="#" class="headerlink" title=""></a></h4><h1 id="express"><a href="#express" class="headerlink" title="express"></a><strong>express</strong></h1><h2 id="res-send-与-res-end-的区别"><a href="#res-send-与-res-end-的区别" class="headerlink" title="res.send()与 res.end()的区别"></a>res.send()与 res.end()的区别</h2><p><img src="/img/image-20201223171823855.png" srcset="/img/loading.gif" lazyload alt="image-20201223171823855"></p>
-<h2 id="Hello-world"><a href="#Hello-world" class="headerlink" title="Hello world"></a>Hello world</h2><p><img src="/img/image-20201224130930721.png" srcset="/img/loading.gif" lazyload alt="image-20201224130930721"></p>
-<h2 id="注册路由-get-use-all-的区别"><a href="#注册路由-get-use-all-的区别" class="headerlink" title="注册路由 get(), use(), all()的区别"></a>注册路由 get(), use(), all()的区别</h2><p><img src="/img/image-20201224132014820.png" srcset="/img/loading.gif" lazyload alt="image-20201224132014820"></p>
+<h2 id="重定向">重定向</h2>
+<p><img src="/img/image-20201221114532427.png" srcset="/img/loading.gif" lazyload alt="image-20201221114532427"></p>
+<h1>require 加载模块时 同步加载</h1>
+<p><img src="/img/image-20201222140705533.png" srcset="/img/loading.gif" lazyload alt="image-20201222140705533"></p>
+<h4 id=""></h4>
+<h1><strong>express</strong></h1>
+<h2 id="res-send-与-res-end-的区别">res.send()与 res.end()的区别</h2>
+<p><img src="/img/image-20201223171823855.png" srcset="/img/loading.gif" lazyload alt="image-20201223171823855"></p>
+<h2 id="Hello-world">Hello world</h2>
+<p><img src="/img/image-20201224130930721.png" srcset="/img/loading.gif" lazyload alt="image-20201224130930721"></p>
+<h2 id="注册路由-get-use-all-的区别">注册路由 get(), use(), all()的区别</h2>
+<p><img src="/img/image-20201224132014820.png" srcset="/img/loading.gif" lazyload alt="image-20201224132014820"></p>
 <p>注册路由 正则表达式</p>
 <p><img src="/img/image-20201224133004235.png" srcset="/img/loading.gif" lazyload alt="image-20201224133004235"></p>
 <p>​ 通过 req.params 获取请求路由中的参数</p>
 <p><img src="/img/image-20201224133634313.png" srcset="/img/loading.gif" lazyload alt="image-20201224133634313"></p>
-<h2 id="简单模拟-Apache"><a href="#简单模拟-Apache" class="headerlink" title="简单模拟 Apache"></a>简单模拟 Apache</h2><p><img src="/img/image-20201224135429120.png" srcset="/img/loading.gif" lazyload alt="image-20201224135429120"></p>
+<h2 id="简单模拟-Apache">简单模拟 Apache</h2>
+<p><img src="/img/image-20201224135429120.png" srcset="/img/loading.gif" lazyload alt="image-20201224135429120"></p>
 <p>response 常用 api</p>
 <p><img src="/img/image-20201229135557689.png" srcset="/img/loading.gif" lazyload alt="image-20201229135557689"></p>
 

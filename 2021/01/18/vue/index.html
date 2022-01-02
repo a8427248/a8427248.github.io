@@ -16,12 +16,12 @@
   <meta name="description" content="童同学的博客">
   <meta name="author" content="wellCome">
   <meta name="keywords" content="">
-  <meta name="description" content="MVVM  模板语法常用指令 v-text 和 v-html  v-cloak 防止闪现：利用模板指令解析后不存在的特性 自定义指令​ el：指令属性所在的标签对象 ​ binding：包含指令相关信息数据的对象 ​ 局部指令只在定义的 vm 中有效  计算属性总结：computed 适合一个数据被多个数据影响，watch 适合一个数据影响多个数据​ 计算属性（computed）：   ​ 侦听器">
+  <meta name="description" content="MVVM   模板语法 常用指令  v-text 和 v-html   v-cloak 防止闪现：利用模板指令解析后不存在的特性  自定义指令 ​ el：指令属性所在的标签对象 ​ binding：包含指令相关信息数据的对象 ​ 局部指令只在定义的 vm 中有效  计算属性 总结：computed 适合一个数据被多个数据影响，watch 适合一个数据影响多个数据 ​ 计算属性（computed）：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Vue学习笔记">
 <meta property="og:url" content="http://example.com/2021/01/18/vue/index.html">
 <meta property="og:site_name" content="童同学">
-<meta property="og:description" content="MVVM  模板语法常用指令 v-text 和 v-html  v-cloak 防止闪现：利用模板指令解析后不存在的特性 自定义指令​ el：指令属性所在的标签对象 ​ binding：包含指令相关信息数据的对象 ​ 局部指令只在定义的 vm 中有效  计算属性总结：computed 适合一个数据被多个数据影响，watch 适合一个数据影响多个数据​ 计算属性（computed）：   ​ 侦听器">
+<meta property="og:description" content="MVVM   模板语法 常用指令  v-text 和 v-html   v-cloak 防止闪现：利用模板指令解析后不存在的特性  自定义指令 ​ el：指令属性所在的标签对象 ​ binding：包含指令相关信息数据的对象 ​ 局部指令只在定义的 vm 中有效  计算属性 总结：computed 适合一个数据被多个数据影响，watch 适合一个数据影响多个数据 ​ 计算属性（computed）：">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/img/image-20210322152420803.png">
 <meta property="og:image" content="http://example.com/img/image-20210322160638153.png">
@@ -300,72 +300,106 @@
             <h1 style="display: none">Vue学习笔记</h1>
             
             <div class="markdown-body">
-              <h1 id="MVVM"><a href="#MVVM" class="headerlink" title="MVVM"></a>MVVM</h1><p><img src="/img/image-20210322152420803.png" srcset="/img/loading.gif" lazyload alt="image-20210322152420803"></p>
+              <h1>MVVM</h1>
+<p><img src="/img/image-20210322152420803.png" srcset="/img/loading.gif" lazyload alt="image-20210322152420803"></p>
 <p><img src="/img/image-20210322160638153.png" srcset="/img/loading.gif" lazyload alt="image-20210322160638153"></p>
-<h1 id="模板语法"><a href="#模板语法" class="headerlink" title="模板语法"></a>模板语法</h1><h2 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h2><p><img src="/img/image-20210323114449352.png" srcset="/img/loading.gif" lazyload alt="image-20210323114449352"></p>
-<h2 id="v-text-和-v-html"><a href="#v-text-和-v-html" class="headerlink" title="v-text 和 v-html"></a>v-text 和 v-html</h2><p><img src="/img/image-20210323114912751.png" srcset="/img/loading.gif" lazyload alt="image-20210323114912751"></p>
+<h1>模板语法</h1>
+<h2 id="常用指令">常用指令</h2>
+<p><img src="/img/image-20210323114449352.png" srcset="/img/loading.gif" lazyload alt="image-20210323114449352"></p>
+<h2 id="v-text-和-v-html">v-text 和 v-html</h2>
+<p><img src="/img/image-20210323114912751.png" srcset="/img/loading.gif" lazyload alt="image-20210323114912751"></p>
 <p><img src="/img/image-20210323114935009.png" srcset="/img/loading.gif" lazyload alt="image-20210323114935009"></p>
-<h2 id="v-cloak-防止闪现：利用模板指令解析后不存在的特性"><a href="#v-cloak-防止闪现：利用模板指令解析后不存在的特性" class="headerlink" title="v-cloak 防止闪现：利用模板指令解析后不存在的特性"></a>v-cloak 防止闪现：利用模板指令解析后不存在的特性</h2><p><img src="/img/image-20210327145656098.png" srcset="/img/loading.gif" lazyload alt="image-20210327145656098"></p>
-<h2 id="自定义指令"><a href="#自定义指令" class="headerlink" title="自定义指令"></a>自定义指令</h2><p>​ el：指令属性所在的标签对象</p>
+<h2 id="v-cloak-防止闪现：利用模板指令解析后不存在的特性">v-cloak 防止闪现：利用模板指令解析后不存在的特性</h2>
+<p><img src="/img/image-20210327145656098.png" srcset="/img/loading.gif" lazyload alt="image-20210327145656098"></p>
+<h2 id="自定义指令">自定义指令</h2>
+<p>​ el：指令属性所在的标签对象</p>
 <p>​ binding：包含指令相关信息数据的对象</p>
 <p>​ 局部指令只在定义的 vm 中有效</p>
 <p><img src="/img/image-20210327160200376.png" srcset="/img/loading.gif" lazyload alt="image-20210327160200376"></p>
-<h1 id="计算属性"><a href="#计算属性" class="headerlink" title="计算属性"></a>计算属性</h1><h2 id="总结：computed-适合一个数据被多个数据影响，watch-适合一个数据影响多个数据"><a href="#总结：computed-适合一个数据被多个数据影响，watch-适合一个数据影响多个数据" class="headerlink" title="总结：computed 适合一个数据被多个数据影响，watch 适合一个数据影响多个数据"></a>总结：computed 适合一个数据被多个数据影响，watch 适合一个数据影响多个数据</h2><p>​ 计算属性（computed）：</p>
+<h1>计算属性</h1>
+<h2 id="总结：computed-适合一个数据被多个数据影响，watch-适合一个数据影响多个数据">总结：computed 适合一个数据被多个数据影响，watch 适合一个数据影响多个数据</h2>
+<p>​ 计算属性（computed）：</p>
 <p><img src="/img/image-20210125105621286.png" srcset="/img/loading.gif" lazyload alt="image-20210125105621286"></p>
 <p><img src="/img/image-20210125111427569.png" srcset="/img/loading.gif" lazyload alt="image-20210125111427569"></p>
 <p>​ 侦听器 watch:</p>
 <p><img src="/img/image-20210125113833716.png" srcset="/img/loading.gif" lazyload alt="image-20210125113833716"></p>
 <p><img src="/img/image-20210125115055227.png" srcset="/img/loading.gif" lazyload alt="image-20210125115055227"></p>
 <p><img src="/img/image-20210125115746303.png" srcset="/img/loading.gif" lazyload alt="image-20210125115746303"></p>
-<h1 id="class-与-style-的绑定"><a href="#class-与-style-的绑定" class="headerlink" title="class 与 style 的绑定"></a>class 与 style 的绑定</h1><p><img src="/img/image-20210323152007918.png" srcset="/img/loading.gif" lazyload alt="image-20210323152007918"></p>
+<h1>class 与 style 的绑定</h1>
+<p><img src="/img/image-20210323152007918.png" srcset="/img/loading.gif" lazyload alt="image-20210323152007918"></p>
 <p>​ 绑定 class：</p>
 <p><img src="/img/image-20210323231147027.png" srcset="/img/loading.gif" lazyload alt="image-20210323231147027"></p>
 <p>​ 绑定 style：</p>
 <p><img src="/img/image-20210125135655229.png" srcset="/img/loading.gif" lazyload alt="image-20210125135655229"></p>
-<h1 id="条件渲染-if-和-show："><a href="#条件渲染-if-和-show：" class="headerlink" title="条件渲染 if 和 show："></a>条件渲染 if 和 show：</h1><p><img src="/img/image-20210125144859816.png" srcset="/img/loading.gif" lazyload alt="image-20210125144859816"></p>
-<h3 id="key：在数据中加入-ID-或者-shortid-插件"><a href="#key：在数据中加入-ID-或者-shortid-插件" class="headerlink" title="key：在数据中加入 ID 或者 shortid 插件"></a>key：在数据中加入 ID 或者 shortid 插件</h3><h1 id="列表渲染"><a href="#列表渲染" class="headerlink" title="列表渲染"></a>列表渲染</h1><p><img src="/img/image-20210324113947445.png" srcset="/img/loading.gif" lazyload alt="image-20210324113947445"></p>
+<h1>条件渲染 if 和 show：</h1>
+<p><img src="/img/image-20210125144859816.png" srcset="/img/loading.gif" lazyload alt="image-20210125144859816"></p>
+<h3 id="key：在数据中加入-ID-或者-shortid-插件">key：在数据中加入 ID 或者 shortid 插件</h3>
+<h1>列表渲染</h1>
+<p><img src="/img/image-20210324113947445.png" srcset="/img/loading.gif" lazyload alt="image-20210324113947445"></p>
 <p><img src="/img/image-20210324114016907.png" srcset="/img/loading.gif" lazyload alt="image-20210324114016907"></p>
 <p>​ vue 重写了以下方法，使数组内部改变时会渲染到界面</p>
 <p><img src="/img/image-20210324105328154.png" srcset="/img/loading.gif" lazyload alt="image-20210324105328154"></p>
-<h1 id="列表搜索过滤：计算属性"><a href="#列表搜索过滤：计算属性" class="headerlink" title="列表搜索过滤：计算属性"></a>列表搜索过滤：计算属性</h1><p>​ .filter（）返回满足条件的结果</p>
+<h1>列表搜索过滤：计算属性</h1>
+<p>​ .filter（）返回满足条件的结果</p>
 <p><img src="/img/image-20210324120354961.png" srcset="/img/loading.gif" lazyload alt="image-20210324120354961"></p>
-<h1 id="列表排序：计算属性"><a href="#列表排序：计算属性" class="headerlink" title="列表排序：计算属性"></a>列表排序：计算属性</h1><p>​ .sort(A,B){}</p>
+<h1>列表排序：计算属性</h1>
+<p>​ .sort(A,B){}</p>
 <p><img src="/img/image-20210324122111599.png" srcset="/img/loading.gif" lazyload alt="image-20210324122111599"></p>
-<h1 id="事件处理"><a href="#事件处理" class="headerlink" title="事件处理"></a>事件处理</h1><h2 id="绑定监听"><a href="#绑定监听" class="headerlink" title="绑定监听"></a>绑定监听</h2><p>​ 事件参数$event，没有传递参数时会默认传递这个$event，当有传参时要手动传递$event</p>
+<h1>事件处理</h1>
+<h2 id="绑定监听">绑定监听</h2>
+<p>​ 事件参数$event，没有传递参数时会默认传递这个$event，当有传参时要手动传递$event</p>
 <p><img src="/img/image-20210324153303113.png" srcset="/img/loading.gif" lazyload alt="image-20210324153303113"></p>
-<h2 id="事件修饰符"><a href="#事件修饰符" class="headerlink" title="事件修饰符"></a>事件修饰符</h2><p><img src="/img/image-20210324161018283.png" srcset="/img/loading.gif" lazyload alt="image-20210324161018283"></p>
-<h3 id="事件冒泡-stop-阻止事件冒泡"><a href="#事件冒泡-stop-阻止事件冒泡" class="headerlink" title="事件冒泡 .stop 阻止事件冒泡"></a>事件冒泡 .stop 阻止事件冒泡</h3><p><img src="/img/image-20210324160143883.png" srcset="/img/loading.gif" lazyload alt="image-20210324160143883"></p>
-<h3 id="默认事件-prevent-阻止默认行为"><a href="#默认事件-prevent-阻止默认行为" class="headerlink" title="默认事件 .prevent 阻止默认行为"></a>默认事件 .prevent 阻止默认行为</h3><h2 id="按键修饰符"><a href="#按键修饰符" class="headerlink" title="按键修饰符"></a>按键修饰符</h2><p><img src="/img/image-20210324161102248.png" srcset="/img/loading.gif" lazyload alt="image-20210324161102248"></p>
+<h2 id="事件修饰符">事件修饰符</h2>
+<p><img src="/img/image-20210324161018283.png" srcset="/img/loading.gif" lazyload alt="image-20210324161018283"></p>
+<h3 id="事件冒泡-stop-阻止事件冒泡">事件冒泡 .stop 阻止事件冒泡</h3>
+<p><img src="/img/image-20210324160143883.png" srcset="/img/loading.gif" lazyload alt="image-20210324160143883"></p>
+<h3 id="默认事件-prevent-阻止默认行为">默认事件 .prevent 阻止默认行为</h3>
+<h2 id="按键修饰符">按键修饰符</h2>
+<p><img src="/img/image-20210324161102248.png" srcset="/img/loading.gif" lazyload alt="image-20210324161102248"></p>
 <p>​</p>
 <p><img src="/img/image-20210324160853801.png" srcset="/img/loading.gif" lazyload alt="image-20210324160853801"></p>
-<h1 id="Vue-生命周期"><a href="#Vue-生命周期" class="headerlink" title="Vue 生命周期"></a>Vue 生命周期</h1><p>​ 最常用的两个生命周期回调函数（勾子）</p>
+<h1>Vue 生命周期</h1>
+<p>​ 最常用的两个生命周期回调函数（勾子）</p>
 <p><img src="/img/image-20210327101421260.png" srcset="/img/loading.gif" lazyload alt="image-20210327101421260"></p>
-<h1 id="过滤器"><a href="#过滤器" class="headerlink" title="过滤器"></a>过滤器</h1><p>​ 对数据进行处理</p>
+<h1>过滤器</h1>
+<p>​ 对数据进行处理</p>
 <p><img src="/img/image-20210327144757588.png" srcset="/img/loading.gif" lazyload alt="image-20210327144757588"></p>
 <p><img src="/img/image-20210327144820567.png" srcset="/img/loading.gif" lazyload alt="image-20210327144820567"></p>
-<h1 id="Vue-cli-创建项目"><a href="#Vue-cli-创建项目" class="headerlink" title="Vue-cli 创建项目"></a>Vue-cli 创建项目</h1><p>​ vue init webpack demo 初始化项目，这里的 webpack 是模板名称</p>
-<h2 id="打包，发布项目"><a href="#打包，发布项目" class="headerlink" title="打包，发布项目"></a>打包，发布项目</h2><p>​ 静态服务器</p>
+<h1>Vue-cli 创建项目</h1>
+<p>​ vue init webpack demo 初始化项目，这里的 webpack 是模板名称</p>
+<h2 id="打包，发布项目">打包，发布项目</h2>
+<p>​ 静态服务器</p>
 <p><img src="/img/image-20210330094346785.png" srcset="/img/loading.gif" lazyload alt="image-20210330094346785"></p>
 <p>动态服务器 需要下载 tomcat 到本地</p>
 <p><img src="/img/image-20210330094507849.png" srcset="/img/loading.gif" lazyload alt="image-20210330094507849"></p>
-<h1 id="localStorage"><a href="#localStorage" class="headerlink" title="localStorage"></a>localStorage</h1><p>​ 存储数据，需要深度监视！</p>
+<h1>localStorage</h1>
+<p>​ 存储数据，需要深度监视！</p>
 <p>​ 以下配置在 data 中</p>
 <p><img src="/img/image-20210428153442872.png" srcset="/img/loading.gif" lazyload alt="image-20210428153442872"></p>
-<h1 id="组件间通信"><a href="#组件间通信" class="headerlink" title="组件间通信"></a>组件间通信</h1><h2 id="props，父往子"><a href="#props，父往子" class="headerlink" title="props，父往子"></a>props，父往子</h2><p>​ 父组件传递</p>
+<h1>组件间通信</h1>
+<h2 id="props，父往子">props，父往子</h2>
+<p>​ 父组件传递</p>
 <p><img src="/img/image-20210330110946173.png" srcset="/img/loading.gif" lazyload alt="image-20210330110946173"></p>
 <p>​ 子组件接收，接受到的属性可以和 data 里的数据一样使用</p>
 <p><img src="/img/image-20210330111035917.png" srcset="/img/loading.gif" lazyload alt="image-20210330111035917"></p>
-<h2 id="emit，子往父"><a href="#emit，子往父" class="headerlink" title="$emit，子往父"></a>$emit，子往父</h2><p><img src="/img/image-20210429113217209.png" srcset="/img/loading.gif" lazyload alt="image-20210429113217209"></p>
+<h2 id="emit，子往父">$emit，子往父</h2>
+<p><img src="/img/image-20210429113217209.png" srcset="/img/loading.gif" lazyload alt="image-20210429113217209"></p>
 <p>​ 在方法中，子组件抛出事件</p>
 <p><img src="/img/image-20210429101448176.png" srcset="/img/loading.gif" lazyload alt="image-20210429101448176"></p>
 <p>在父组件里绑定监听</p>
 <p><img src="/img/image-20210428183940688.png" srcset="/img/loading.gif" lazyload alt="image-20210428183940688"></p>
-<h2 id="中央事件总线，兄弟间"><a href="#中央事件总线，兄弟间" class="headerlink" title="中央事件总线，兄弟间"></a>中央事件总线，兄弟间</h2><p><img src="/img/image-20210429113958643.png" srcset="/img/loading.gif" lazyload alt="image-20210429113958643"></p>
+<h2 id="中央事件总线，兄弟间">中央事件总线，兄弟间</h2>
+<p><img src="/img/image-20210429113958643.png" srcset="/img/loading.gif" lazyload alt="image-20210429113958643"></p>
 <p><img src="/img/image-20210429115503571.png" srcset="/img/loading.gif" lazyload alt="image-20210429115503571"></p>
-<h2 id="slot-插槽"><a href="#slot-插槽" class="headerlink" title="slot 插槽"></a>slot 插槽</h2><p>​ 子组件预留插槽，等待父组件传递标签展示内容</p>
+<h2 id="slot-插槽">slot 插槽</h2>
+<p>​ 子组件预留插槽，等待父组件传递标签展示内容</p>
 <p><img src="/img/image-20210429163258848.png" srcset="/img/loading.gif" lazyload alt="image-20210429163258848"></p>
-<h1 id="Ajax"><a href="#Ajax" class="headerlink" title="Ajax"></a>Ajax</h1><h2 id="axios"><a href="#axios" class="headerlink" title="axios"></a>axios</h2><p><img src="/img/image-20210501111756598.png" srcset="/img/loading.gif" lazyload alt="image-20210501111756598"></p>
-<h1 id="基本路由"><a href="#基本路由" class="headerlink" title="基本路由"></a>基本路由</h1><h2 id="定义路由-→-注册路由-→-使用路由"><a href="#定义路由-→-注册路由-→-使用路由" class="headerlink" title="定义路由 → 注册路由 → 使用路由"></a>定义路由 → 注册路由 → 使用路由</h2><p>​ 1.在 views 文件夹中创建路由</p>
+<h1>Ajax</h1>
+<h2 id="axios">axios</h2>
+<p><img src="/img/image-20210501111756598.png" srcset="/img/loading.gif" lazyload alt="image-20210501111756598"></p>
+<h1>基本路由</h1>
+<h2 id="定义路由-→-注册路由-→-使用路由">定义路由 → 注册路由 → 使用路由</h2>
+<p>​ 1.在 views 文件夹中创建路由</p>
 <p><img src="/img/image-20210615141023656.png" srcset="/img/loading.gif" lazyload alt="image-20210615141023656"></p>
 <p>​ 2.在 router 路由器中映射成路由</p>
 <p><img src="/img/image-20210615141119028.png" srcset="/img/loading.gif" lazyload alt="image-20210615141119028"></p>
@@ -373,24 +407,36 @@
 <p><img src="/img/image-20210615141300786.png" srcset="/img/loading.gif" lazyload alt="image-20210615141300786"></p>
 <p>​ 4.在 main.js 中需要一次性配置 router</p>
 <p><img src="/img/image-20210615141448875.png" srcset="/img/loading.gif" lazyload alt="image-20210615141448875"></p>
-<h1 id="嵌套路由"><a href="#嵌套路由" class="headerlink" title="嵌套路由"></a>嵌套路由</h1><p><img src="/img/image-20210619152732333.png" srcset="/img/loading.gif" lazyload alt="image-20210619152732333"></p>
-<h1 id="向路由组件传递数据"><a href="#向路由组件传递数据" class="headerlink" title="向路由组件传递数据"></a>向路由组件传递数据</h1><h2 id="方式-1-用-id"><a href="#方式-1-用-id" class="headerlink" title="方式 1 用 :id"></a>方式 1 用 :id</h2><p><img src="/img/image-20210816173931903.png" srcset="/img/loading.gif" lazyload alt="image-20210816173931903"></p>
-<h2 id="方式-2-类似-props-传递"><a href="#方式-2-类似-props-传递" class="headerlink" title="方式 2 类似 props 传递"></a>方式 2 类似 props 传递</h2><p><img src="/img/image-20210816174044073.png" srcset="/img/loading.gif" lazyload alt="image-20210816174044073"></p>
-<h1 id="缓存路由组件"><a href="#缓存路由组件" class="headerlink" title="缓存路由组件"></a>缓存路由组件</h1><p>​ 保持路由组件对象存活，避免重新创建路由组件对象导致数据丢失</p>
+<h1>嵌套路由</h1>
+<p><img src="/img/image-20210619152732333.png" srcset="/img/loading.gif" lazyload alt="image-20210619152732333"></p>
+<h1>向路由组件传递数据</h1>
+<h2 id="方式-1-用-id">方式 1 用 :id</h2>
+<p><img src="/img/image-20210816173931903.png" srcset="/img/loading.gif" lazyload alt="image-20210816173931903"></p>
+<h2 id="方式-2-类似-props-传递">方式 2 类似 props 传递</h2>
+<p><img src="/img/image-20210816174044073.png" srcset="/img/loading.gif" lazyload alt="image-20210816174044073"></p>
+<h1>缓存路由组件</h1>
+<p>​ 保持路由组件对象存活，避免重新创建路由组件对象导致数据丢失</p>
 <p><img src="/img/image-20210816175546526.png" srcset="/img/loading.gif" lazyload alt="image-20210816175546526"></p>
-<h1 id="编程式路由导航"><a href="#编程式路由导航" class="headerlink" title="编程式路由导航"></a>编程式路由导航</h1><p>​ 常用前三种</p>
+<h1>编程式路由导航</h1>
+<p>​ 常用前三种</p>
 <p><img src="/img/image-20210817152349108.png" srcset="/img/loading.gif" lazyload alt="image-20210817152349108"></p>
 <p><img src="/img/image-20210817152847443.png" srcset="/img/loading.gif" lazyload alt="image-20210817152847443"></p>
 <p><img src="/img/image-20210817152906090.png" srcset="/img/loading.gif" lazyload alt="image-20210817152906090"></p>
 <p><img src="/img/image-20210817152959447.png" srcset="/img/loading.gif" lazyload alt="image-20210817152959447"></p>
-<h1 id="VUEX"><a href="#VUEX" class="headerlink" title="VUEX"></a>VUEX</h1><p><img src="/img/image-20210819204107697.png" srcset="/img/loading.gif" lazyload alt="image-20210819204107697"></p>
+<h1>VUEX</h1>
+<p><img src="/img/image-20210819204107697.png" srcset="/img/loading.gif" lazyload alt="image-20210819204107697"></p>
 <p><img src="/img/image-20210819221802923.png" srcset="/img/loading.gif" lazyload alt="image-20210819221802923"></p>
-<h2 id="vuex-的基本使用，最简单的-store"><a href="#vuex-的基本使用，最简单的-store" class="headerlink" title="vuex 的基本使用，最简单的 store"></a>vuex 的基本使用，最简单的 store</h2><p><img src="/img/image-20210819190341308.png" srcset="/img/loading.gif" lazyload alt="image-20210819190341308"></p>
-<h2 id="小型项目无需使用-vuex-的时候，使用简单的-store-模式"><a href="#小型项目无需使用-vuex-的时候，使用简单的-store-模式" class="headerlink" title="小型项目无需使用 vuex 的时候，使用简单的 store 模式"></a>小型项目无需使用 vuex 的时候，使用简单的 store 模式</h2><p><img src="/img/image-20210819190732653.png" srcset="/img/loading.gif" lazyload alt="image-20210819190732653"></p>
+<h2 id="vuex-的基本使用，最简单的-store">vuex 的基本使用，最简单的 store</h2>
+<p><img src="/img/image-20210819190341308.png" srcset="/img/loading.gif" lazyload alt="image-20210819190341308"></p>
+<h2 id="小型项目无需使用-vuex-的时候，使用简单的-store-模式">小型项目无需使用 vuex 的时候，使用简单的 store 模式</h2>
+<p><img src="/img/image-20210819190732653.png" srcset="/img/loading.gif" lazyload alt="image-20210819190732653"></p>
 <p><img src="/img/image-20210819190800737.png" srcset="/img/loading.gif" lazyload alt="image-20210819190800737"></p>
 <p><img src="/img/image-20210819190822214.png" srcset="/img/loading.gif" lazyload alt="image-20210819190822214"></p>
-<h2 id="store-的常用属性：-state-getters-dispatch-commit"><a href="#store-的常用属性：-state-getters-dispatch-commit" class="headerlink" title="store 的常用属性： state getters dispatch commit"></a>store 的常用属性： state getters dispatch commit</h2><h3 id="getters-的使用"><a href="#getters-的使用" class="headerlink" title="getters 的使用"></a>getters 的使用</h3><p><img src="/img/image-20210819203852069.png" srcset="/img/loading.gif" lazyload alt="image-20210819203852069"></p>
-<h2 id="mapState-mapGetters-mapActions-的使用"><a href="#mapState-mapGetters-mapActions-的使用" class="headerlink" title="mapState mapGetters mapActions 的使用"></a>mapState mapGetters mapActions 的使用</h2><p>​ 让语法更简洁</p>
+<h2 id="store-的常用属性：-state-getters-dispatch-commit">store 的常用属性： state getters dispatch commit</h2>
+<h3 id="getters-的使用">getters 的使用</h3>
+<p><img src="/img/image-20210819203852069.png" srcset="/img/loading.gif" lazyload alt="image-20210819203852069"></p>
+<h2 id="mapState-mapGetters-mapActions-的使用">mapState mapGetters mapActions 的使用</h2>
+<p>​ 让语法更简洁</p>
 <p><img src="/img/image-20210819220446128.png" srcset="/img/loading.gif" lazyload alt="image-20210819220446128"></p>
 <p><img src="/img/image-20210819220554738.png" srcset="/img/loading.gif" lazyload alt="image-20210819220554738"></p>
 <p>​</p>
